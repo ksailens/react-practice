@@ -1,10 +1,25 @@
 import React, {Component} from 'react'
 import classes from './Layout.css'
+import MenuToggle from '../../components/Navigation/MenuToggle/MenuToggle'
 
 class Layout extends Component {
-  render() {
+  state = {
+  	menu: false
+  };
+
+	toggleMenuHandler = () =>{
+		this.setState({
+			menu: !this.state.menu
+		})
+  };
+
+
+	render() {
     return (
       <div className={classes.Layout}>
+				<MenuToggle
+					onToggle={this.toggleMenuHandler}
+				/>
         <main>
           {this.props.children}
         </main>
