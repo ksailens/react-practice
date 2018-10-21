@@ -6,7 +6,6 @@ const MenuToggle = props => {
 		classes.MenuToggle,
 		'fa'
 	];
-
 	if (props.isOpen) {
 		cls.push('fa-times')
 		cls.push(classes.open)
