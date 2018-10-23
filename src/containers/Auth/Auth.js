@@ -85,7 +85,7 @@ export default class Auth extends Component {
 
 		Object.keys(formControls).forEach(name =>{
 			isFormValid = formControls[name].valid && isFormValid
-		})
+		});
 
 		this.setState({
 			formControls, isFormValid
